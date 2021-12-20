@@ -1,0 +1,191 @@
+/* UTILITIES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   }
+   body {
+    font-family: 'Roboto Mono', monospace;
+    background-color: rgb(54, 52, 52);
+   }
+
+   a {
+    text-decoration: none;
+   }
+   li {
+    list-style: none;
+   }
+
+   .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding: 10px;
+    background-color: teal;
+    color: #fff;
+    border-radius: 45px;
+   }
+
+   .nav-links a {
+    color: #fff;
+   }
+
+   .nav-logo {
+    font-size: 32px;
+    margin-left: 30px;
+    cursor: pointer;
+   }
+
+   .nav-menu {
+    display: flex;
+    gap: 12px;
+    font-size: 18px;
+    margin-left: 10px;
+   }
+
+   .nav-menu li:hover {
+    background-color: rgb(61, 26, 26);
+    /* text-decoration: underline; */
+    border-radius: 5px;
+    transition: all 0.3s ease-out;
+    cursor: pointer;
+}
+
+   .nav-menu li {
+    padding: 5px 14px;
+   }
+
+   /* .explore{
+    position: relative; 
+   }
+
+   .dropdown {
+    background-color: rgb(145, 161, 161);
+    padding: 1em 0;
+    position: absolute; /*WITH RESPECT TO PARENT*/
+    /*display: none;
+    border-radius: 8px;
+    top: 35px;
+    margin-top: 5px;
+    transition: 0.3s ease;
+
+   }
+
+   .dropdown li + li {
+    margin-top: 10px;
+   }
+
+   .dropdown li {
+    padding: 0.5em 1em;
+    width: 8em;
+    text-align: center;
+   }
+
+   .dropdown li:hover {
+    background-color: #4c9e9e;
+    transition: 0.3s ease-out;
+
+   }
+
+   .explore:hover .dropdown {
+    display: block;
+   } */
+
+   .dropbtn {
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(253, 250, 250, 0.2);
+    z-index: 1;
+    margin-top: 10px;
+    border-radius: 7.5px;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 5px 5px;
+    text-decoration: none;
+    display: block;
+    font-size: 15px;
+  }
+  
+  .dropdown-content a:hover {
+      background-color: #3794a5;
+      color:white;  
+      transition: all 0.25s ease-out; 
+      border-radius: 7.5px;  
+}
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  /* .dropdown:hover .dropbtn {
+    background-color: #cce0cd;
+  } */
+
+.l-r-button{
+  position: fixed;
+  right:350px;
+  padding: 0;
+  margin: 0;
+
+}
+
+.Login{
+    color:white;
+    background-color:rgb(8, 32, 56);
+    padding:10px 16px;
+    text-align:center;
+    border:none;
+    border-radius:4px;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 15px;
+    width:100px;
+    height:50px;
+}
+
+
+.Register{
+    color:white;
+    background-color:teal;
+    padding:10px 16px;
+    text-align:center;
+    border-radius:4px;
+    font-family: 'Roboto Mono', monospace;
+    border-color: rgb(8, 32, 56);
+    font-size: 15px;
+    width: 100px;
+    height: 50px;
+    margin-left: 16px;
+}
+
+.Login:hover{
+    background-color: white;
+    color:rgb(8, 32, 56);
+    transition: all 0.25s ease-out;
+    cursor: pointer;
+}
+
+.Register:hover{
+    background-color: white;
+    color:rgb(8, 32, 56);
+    transition: all 0.25s ease-out;
+    border:none;
+    cursor: pointer;
+}
+
