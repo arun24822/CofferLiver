@@ -9,6 +9,7 @@
     top:0px;
     z-index: 1;
     background-color: white;
+    scroll-behavior: smooth;
 }
 
 .a-bottom {
