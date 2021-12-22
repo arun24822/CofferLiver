@@ -1,13 +1,49 @@
+
 .homePage{
     display: block;
     overflow: auto;
     margin-top: 100px;
     margin-left: 50px;
+    height: 700px;
+}
+
+.homePage2{
+  display: block;
+  overflow: auto;
+  margin-top: 100px;
+  margin-left: 50px;
+  height: 600px;
 }
   
 .homeContent{
-    background: -webkit-linear-gradient(rgb(232, 241, 101), rgb(243, 87, 209));
+    background: -webkit-linear-gradient(rgb(218, 213, 151), rgb(155, 150, 128));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-size: 100px;
+    font-size: 95px;
+    animation: text-clip 2s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
+}
+
+@keyframes text-clip {
+    from {
+      clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
+    }
+    to {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+  }
+
+
+
+.image-fruits{
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.grid-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+  background: -webkit-linear-gradient(rgb(17, 12, 85), rgb(45, 6, 54));
 }
