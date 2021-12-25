@@ -8,5 +8,5 @@ def home():
 
 
 @app.route("/login")
-def login():
-    return render_template('login.html')
+def login_():
+    return render_template('/includes/login.html')
