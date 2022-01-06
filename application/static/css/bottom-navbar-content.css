@@ -54,6 +54,11 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-column-gap: 35px;
+    padding-top: 200px;
+    margin-bottom: 200px;
+    position: relative;
+    left:0;
+    top:0;    
 }
 
 .reviews1{
