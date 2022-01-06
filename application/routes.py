@@ -12,6 +12,6 @@ def login_():
     return render_template('/includes/login.html')
 
 
-@app.route("/check_your_health")
-def check_your_health():
-    return render_template('/includes/check_your_health.html')
+@app.route("/check-your-health-advanced")
+def check_your_health_advanced():
+    return render_template('/includes/check_your_health_advanced.html')
