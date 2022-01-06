@@ -2,7 +2,12 @@
     <div class='nav-logo'><a class='home-page-anchor' href="/">CofferLiver</a></div>
       <ul class='nav-links'>
         <div class='nav-menu'>
-          <li><a href=" {{url_for('check_your_health')}} ">Check</a></li>
+          <li class='dropdown'><a href="#" class="dropbtn">Check</a>
+            <div class="dropdown-content">
+              <a href="#">Common</a>
+              <a href="{{url_for('check_your_health_advanced')}}">Advanced</a>
+            </div>
+          </li>
           <li class='dropdown'><a href="#" class="dropbtn">Explore</a>
             <div class="dropdown-content">
               <a href="#">Link 1</a>
