@@ -1,0 +1,76 @@
+{% include "includes/all-css.html" %}
+{% include "includes/fonts.html" %}
+{% include "includes/navbar.html" %}
+
+<div class="form-container">
+    <form class="main-form" action="">
+        <label class="basic-label">Age</label><br><input class="basic-input" type="text" name="age" placeholder="Ex: 76">  
+        <label class="basic-label">Gender</label><br> 
+        <select class="basic-input" name="gender" aria-placeholder="choose">
+            <option value="" disabled selected>Select your option</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+        </select>
+        <label class="basic-label">Body Mass Index</label><br><input class="basic-input" type="text" name="bmi" placeholder="Ex: 23.45">
+        <label class="basic-label">Do you have fever?</label><br>
+        <select class="basic-input" name="fever" aria-placeholder="choose">
+            <option value="" disabled selected>Select your option</option>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+        </select>
+        <label class="basic-label">Do you feel like vomitting/Nausea?</label><br>
+        <select class="basic-input" name="cars" aria-placeholder="choose">
+            <option value="" disabled selected>Select your option</option>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+        </select>
+        <label class="basic-label">Are you suffering from headache?</label><br>
+        <select class="basic-input" name="headache" aria-placeholder="choose">
+            <option value="" disabled selected>Select your option</option>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+        </select>
+        <label class="basic-label">Are you suffering from Diarrhea?</label><br>
+        <select class="basic-input" name="diarrhea" aria-placeholder="choose">
+            <option value="" disabled selected>Select your option</option>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+        </select>
+        <label class="basic-label">Do you feel like having fatigue/generalised bone ache</label><br>
+        <select class="basic-input" name="fatigue" aria-placeholder="choose">
+            <option value="" disabled selected>Select your option</option>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+        </select>
+        <label class="basic-label">Are you suffering from Jaundice?</label><br>
+        <select class="basic-input" name="jaundice" aria-placeholder="choose">
+            <option value="" disabled selected>Select your option</option>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+        </select>
+        <label class="basic-label">Are you suffering from epigastric pain?</label><br>
+        <select class="basic-input" name="epigastric-pain" aria-placeholder="choose">
+            <option value="" disabled selected>Select your option</option>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+        </select>
+        <label class="basic-label">WBC count</label><br><input class="basic-input" type="text" name="wbc" placeholder="Ex: 76">  
+        <label class="basic-label">RBC count</label><br><input class="basic-input" type="text" name="rbc" placeholder="Ex: 76">  
+        <label class="basic-label">HGB count</label><br><input class="basic-input" type="text" name="hgb" placeholder="Ex: 76">  
+        <label class="basic-label">Plat</label><br><input class="basic-input" type="text" name="plat" placeholder="Ex: 76">  
+        <label class="basic-label">AST 1</label><br><input class="basic-input" type="text" name="ast1" placeholder="Ex: 76">  
+        <label class="basic-label">ALT 1</label><br><input class="basic-input" type="text" name="alt1" placeholder="Ex: 76">  
+        <label class="basic-label">ALT 4</label><br><input class="basic-input" type="text" name="alt4" placeholder="Ex: 76">  
+        <label class="basic-label">ALT 12</label><br><input class="basic-input" type="text" name="alt12" placeholder="Ex: 76">  
+        <label class="basic-label">ALT 24</label><br><input class="basic-input" type="text" name="alt24" placeholder="Ex: 76">  
+        <label class="basic-label">ALT 36</label><br><input class="basic-input" type="text" name="alt36" placeholder="Ex: 76">  
+        <label class="basic-label">ALT 48</label><br><input class="basic-input" type="text" name="alt48" placeholder="Ex: 76">  
+        <label class="basic-label">ALT after 24 weeks</label><br><input class="basic-input" type="alta24" name="age" placeholder="Ex: 76">  
+        <label class="basic-label">RNA 4</label><br><input class="basic-input" type="text" name="rna4" placeholder="Ex: 76">  
+        <label class="basic-label">RNA 12</label><br><input class="basic-input" type="text" name="rna12" placeholder="Ex: 76">  
+        <label class="basic-label">RNA EOT</label><br><input class="basic-input" type="text" name="rnaeot" placeholder="Ex: 76">  
+        <label class="basic-label">RNA EF</label><br><input class="basic-input" type="text" name="rnaef" placeholder="Ex: 76">  
+        <label class="basic-label">Baseline Historical Grading</label><br><input class="basic-input" type="text" name="baseline-historical-grading" placeholder="Ex: 76">  
+        <button class="submit-check" onclick="window.location.href='/login'">Submit</button>
+    </form>
+</div>
