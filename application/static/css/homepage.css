@@ -1,9 +1,8 @@
 .homePage{
   display: block;
   overflow: auto;
-  margin-top: 100px;
   margin-left: 50px;
-  height: 700px;
+  height: 900px;
 }
 
 .homePage2{
@@ -15,8 +14,8 @@
 }
   
 .homeContent{
-    /* background: -webkit-linear-gradient(rgb(218, 213, 151), rgb(155, 150, 128)); */
-    background: black;
+    background: -webkit-linear-gradient(rgb(218, 213, 151), rgb(155, 150, 128));
+    /* background: black; */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-size: 95px;
@@ -50,7 +49,7 @@
   grid-gap: 20px;
   background: -webkit-linear-gradient(rgb(17, 12, 85), rgb(45, 6, 54));
   margin: 30px 30px 30px 30px;
-  border-radius: 45px;
+  border-radius: 15px;
 }
 
 .img-1{
