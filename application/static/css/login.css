@@ -1,0 +1,12 @@
+.form-title{
+    color: brown;
+    /* text-align: center;
+    margin: 10px 10px 10px 10px; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-p{
+    text-align: center;
+}
