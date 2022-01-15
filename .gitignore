@@ -2,3 +2,4 @@ __pycache__/
 venv/
 random_forest_classification.py
 config.py
+app.py
