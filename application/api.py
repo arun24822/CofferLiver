@@ -15,36 +15,6 @@ def db_drop():
 
 @app.cli.command('db_seed')
 def db_seed():
-    mercury = Planet(
-        planet_name = 'Mercury',
-        planet_type = 'Class D',
-        home_star = 'Sol',
-        mass = 3.258e23,
-        radius = 1516,
-        distance = 35.98e6
-    )
-    venus = Planet(
-        planet_name = 'Venus',
-        planet_type = 'Class K',
-        home_star = 'Sol',
-        mass = 4.867e24,
-        radius = 3760,
-        distance = 67.24e6
-    )
-    earth = Planet(
-        planet_name = 'Earth',
-        planet_type = 'Class M',
-        home_star = 'Sol',
-        mass = 5.927e24,
-        radius = 3959,
-        distance = 92.96e6
-    )
-
-    db.session.add(mercury)
-    db.session.add(venus)
-    db.session.add(earth)
-
-
     test_user = User(
         first_name = 'Arun',
         last_name = 'Kumar',
@@ -65,17 +35,24 @@ class User(db.Model):
     last_name = Column(String)
     email = Column(String, unique=True)
     password = Column(String)
+    
 
-
-class Planet(db.Model):
-    __tablename__ = 'planets'
-    planet_id = Column(Integer, primary_key=True)
-    planet_name = Column(String)
-    planet_type = Column(String)
-    home_star = Column(String)
-    mass = Column(Float)
-    radius = Column(Float)
-    distance = Column(Float)
+class BasicHepatitis(db.Model):
+    __tablename__ = 'basic_hepatitis'
+    pateint_id = Column(Integer, primary_key=True)
+    age = Column(Integer)
+    sex = Column(String)
+    alb = Column(Float)
+    alp = Column(Float)
+    alt = Column(Float)
+    ast = Column(Float)
+    bil = Column(Float)
+    che = Column(Float)
+    chol = Column(Float)
+    crea = Column(Float)
+    ggt = Column(Float)
+    prot = Column(Float)
+    category = Column(String)
 
 
 #for serialization
