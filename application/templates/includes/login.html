@@ -1,12 +1,12 @@
 {% include "includes/all-css.html" %}
 
 <div class="form-container">
-    <form class="main-form" action="">
-        <h2 class="form-title">Login</h2>
-        <label class="label-title">Username</label><br><input class="basic-input" type="text" name="username" placeholder="Enter Your Username">
-        <label class="label-title">Password</label><br><input class="basic-input" type="password" name="username" placeholder="Enter Your Password">
+    <form class="main-form" action="" method="post">
+        <h2 class="form-title">{{title}}</h2>
+        <label class="label-title">Username</label><br><input class="basic-input" type="text" name="login-username" placeholder="Enter Your Username">
+        <label class="label-title">Password</label><br><input class="basic-input" type="password" name="login-password" placeholder="Enter Your Password">
         <button class="submit-check" onclick="">Login</button><br>
-        <p class="login-p">Don't have an Account <a href="">Register Here</a></p>
+        <p class="login-p">Don't have an Account <a href="/register">Register Here</a></p>
     </form>
 </div>
 

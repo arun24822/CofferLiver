@@ -5,8 +5,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 0 auto;
 }
 
 .login-p{
     text-align: center;
+    cursor: pointer;
 }
