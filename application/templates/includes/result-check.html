@@ -1,0 +1,176 @@
+{% include "includes/navbar.html" %}
+{% include "includes/all-css.html" %}
+{% include "includes/fonts.html" %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+
+<div class="result-main-div">
+    <div>
+        <h2 class="result-h2">Sorry You are suffering from Fatty Liver.</h2><br>
+        <h4 class="result-h4">Kindly Donot donate blood.</h4>
+    </div>
+    <div class="result-graph-div">
+        <canvas id="myChart" style="max-width:600px"></canvas>
+
+        <script>
+        var xValues = ["Italy", "France", "Spain", "USA", "Argentina"];
+        var yValues = [1,0,4,5,90];
+        var barColors = [
+        "#b91d47",
+        "#00aba9",
+        "#2b5797",
+        "#e8c3b9",
+        "#1e7145"
+        ];
+
+        new Chart("myChart", {
+        type: "pie",
+        data: {
+            labels: xValues,
+            datasets: [{
+            backgroundColor: barColors,
+            data: yValues
+            }]
+        },
+        options: {
+            title: {
+            display: true,
+            text: "World Wide Wine Production 2018"
+            }
+        }
+        });
+        </script>
+    </div>
+</div>
+<div class="result-main-div-2">
+    <div class="sub-main-div-2">
+        <div class="counter-1" data-target="80">0</div>
+        <script>
+            // Selector
+            const counters = document.querySelectorAll('.counter-1');
+            // Main function
+            for(let n of counters) {
+            const updateCount = () => {
+                const target = + n.getAttribute('data-target');
+                const count = + n.innerText;
+                const speed = 100; // change animation speed here
+                const inc = target / speed; 
+                if(count < target) {
+                n.innerText = Math.ceil(count + inc);
+                setTimeout(updateCount, 1);
+                } else {
+                n.innerText = target;
+                }
+            }
+            updateCount();
+            }
+        </script>
+        <div id="hover-content">
+            Probablity of Not having fatty Liver
+        </div>
+    </div>
+
+    <div class="sub-main-div-2">
+        <div class="counter-2" data-target="10">0</div>
+        <script>
+            // Selector
+            const counters2 = document.querySelectorAll('.counter-2');
+            // Main function
+            for(let n of counters2) {
+            const updateCount = () => {
+                const target2 = + n.getAttribute('data-target');
+                const count = + n.innerText;
+                const speed = 100; // change animation speed here
+                const inc = target2 / speed; 
+                if(count < target2) {
+                n.innerText = Math.ceil(count + inc);
+                setTimeout(updateCount, 1);
+                } else {
+                n.innerText = target2;
+                }
+            }
+            updateCount();
+            }
+        </script>
+        <div id="hover-content">
+            Probablity of Not having fatty Liver
+        </div>
+    </div>
+    <div class="sub-main-div-2">
+        <div class="counter-3" data-target="0">0</div>
+        <script>
+            // Selector
+            const counters3 = document.querySelectorAll('.counter-3');
+            // Main function
+            for(let n of counters3) {
+            const updateCount = () => {
+                const target3 = + n.getAttribute('data-target');
+                const count = + n.innerText;
+                const speed = 100; // change animation speed here
+                const inc = target3 / speed; 
+                if(count < target3) {
+                n.innerText = Math.ceil(count + inc);
+                setTimeout(updateCount, 1);
+                } else {
+                n.innerText = target3;
+                }
+            }
+            updateCount();
+            }
+        </script>
+        <div id="hover-content">
+            Probablity of Not having fatty Liver
+        </div>
+    </div>
+    <div class="sub-main-div-2">
+        <div class="counter-4" data-target="5">0</div>
+        <script>
+            // Selector
+            const counters4 = document.querySelectorAll('.counter-4');
+            // Main function
+            for(let n of counters4) {
+            const updateCount = () => {
+                const target4 = + n.getAttribute('data-target');
+                const count = + n.innerText;
+                const speed = 100; // change animation speed here
+                const inc = target4 / speed; 
+                if(count < target4) {
+                n.innerText = Math.ceil(count + inc);
+                setTimeout(updateCount, 1);
+                } else {
+                n.innerText = target;
+                }
+            }
+            updateCount();
+            }
+        </script>
+        <div id="hover-content">
+            Probablity of Not having fatty Liver
+        </div>
+    </div>
+    <div class="sub-main-div-2">
+        <div class="counter-5" data-target="5">0</div>
+        <script>
+            // Selector
+            const counters5 = document.querySelectorAll('.counter-5');
+            // Main function
+            for(let n of counters5) {
+            const updateCount = () => {
+                const target5 = + n.getAttribute('data-target');
+                const count = + n.innerText;
+                const speed = 10000; // change animation speed here
+                const inc = target5 / speed; 
+                if(count < target5) {
+                n.innerText = Math.ceil(count + inc);
+                setTimeout(updateCount, 1);
+                } else {
+                n.innerText = target;
+                }
+            }
+            updateCount();
+            }
+        </script>
+        <div id="hover-content">
+            Probablity of Not having fatty Liver
+        </div>
+    </div>
+</div>

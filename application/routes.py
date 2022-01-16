@@ -1,5 +1,8 @@
+from crypt import methods
+from turtle import title
 from application import app
-from flask import render_template
+from application.forms import LoginFrom #since we are importing object from a file named other that (__init__.py) file. we must use folder.filename
+from flask import render_template, redirect, flash
 
 
 @app.route("/")#decorator
@@ -9,17 +12,30 @@ def home():
 
 @app.route("/login")
 def login_():
-    return render_template('/includes/login.html')
+    form = LoginFrom()
+    if form.validate_on_submit():
+        flash('Successfully Logged in')
+        redirect("/")
+    return render_template('/includes/login.html', title="Login", form=form, login=True)
+
+@app.route("/register")
+def register():
+    return render_template('/includes/register.html')
 
 
 @app.route("/check-your-health-advanced")
 def check_your_health_advanced():
-    return render_template('/includes/check_your_health_advanced.html')
+    return render_template('/includes/check-your-health-advanced.html')
 
 
 @app.route("/check-your-health-common")
 def check_your_health_common():
     return render_template('/includes/check-your-health-common.html')
+
+
+@app.route('/result-check', methods=['POST','GET'])
+def result_check():
+    return render_template('/includes/result-check.html')
 
 
 # class User(db.Document):
