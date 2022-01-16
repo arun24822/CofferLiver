@@ -3,7 +3,7 @@
 {% include "includes/navbar.html" %}
 
 <div class="form-container">
-    <form class="main-form" action="">
+    <form class="main-form" action="{{ url_for('result_check') }}">
         <label class="label-title">Enter the Following Details</label><br>
         <label class="basic-label">Age</label><br><input class="basic-input" type="text" name="age-c" placeholder="Ex: 76">  
         <label class="basic-label">Gender</label><br> 
@@ -22,6 +22,6 @@
         <label class="basic-label">CREA</label><br><input class="basic-input" type="text" name="crea" placeholder="Ex: 106">  
         <label class="basic-label">GGT</label><br><input class="basic-input" type="text" name="ggt" placeholder="Ex: 12.1">  
         <label class="basic-label">PROT</label><br><input class="basic-input" type="text" name="prot" placeholder="Ex: 69">  
-
+        <button class="submit-check">Get Result</button>
     </form>
 </div>
