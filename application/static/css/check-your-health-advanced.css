@@ -1,0 +1,55 @@
+.form-container{
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
+    transition: transform 0.2s;
+    padding:25px 25px 25px 25px;
+    margin: 100px 300px 100px 300px;
+}
+
+.label-title{
+    padding-bottom: 20px;
+    /* width: 100%; */
+    color: rgb(30, 59, 138);
+    font-size: 20;
+    margin-bottom: 15px;
+}
+
+.basic-label{
+    padding-top: 2.5em;
+    cursor: auto;
+    width: 100%;
+    color: teal;
+}
+
+.basic-input{
+    font-size: 16;
+    padding: 5px 5px 5px 5px;
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+.submit-check{
+    color:white;
+    background-color:rgb(8, 32, 56);
+    padding:10px 16px;
+    border:none;
+    border-radius:4px;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 15px;
+    width:100px;
+    height:50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 13%;
+    margin: 0 auto;
+}
+
+.submit-check:hover{
+    background-color: rgb(223, 211, 233);
+    color:rgb(5, 5, 5);
+    transition: all 0.25s ease-out;
+    cursor: pointer;
+}
