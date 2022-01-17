@@ -3,7 +3,7 @@
 {% include "includes/navbar.html" %}
 
 <div class="form-container">
-    <form class="main-form" action="{{ url_for('result_check') }}">
+    <form class="main-form" action="{{ url_for('result_check') }}" method="post">
         <label class="label-title">Enter the Following Details</label><br>
         <label class="basic-label">Age</label><br><input class="basic-input" type="text" name="age-c" placeholder="Ex: 76">  
         <label class="basic-label">Gender</label><br> 
