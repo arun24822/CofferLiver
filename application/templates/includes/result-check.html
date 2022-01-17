@@ -3,23 +3,64 @@
 {% include "includes/fonts.html" %}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
 
+<input type="hidden" id="prediction" value={{prediction}}>
+<input type="hidden" id="one" value={{nofattyliver}}>
+<input type="hidden" id="two" value={{fattyliver}}>
+<input type="hidden" id="three" value={{hepatitis}}>
+<input type="hidden" id="four" value={{fibrosis}}>
+<input type="hidden" id="five" value={{cirrhosis}}>
+
 <div class="result-main-div">
     <div>
-        <h2 class="result-h2">Sorry You are suffering from Fatty Liver.</h2><br>
-        <h4 class="result-h4">Kindly Donot donate blood.</h4>
+        <h2 id="main-heading" class="result-h2"></h2><br>
+        <h4 id="sub-heading" class="result-h4"></h4>
     </div>
+    <script>
+        var prediction_result = document.getElementById("prediction").value;
+        if(parseInt(prediction_result)==0){
+            document.getElementById("main-heading").innerHTML = "Great News. You don't have fatty liver";
+            document.getElementById("sub-heading").innerHTML = "You can donote blood";
+        }
+        else if(parseInt(prediction_result)==1){
+            document.getElementById("main-heading").innerHTML = "Ohhh! You may have fatty liver. Kindly do an ultrasound.";
+            document.getElementById("sub-heading").innerHTML = "Take advice from doctor.";
+        }
+        else if(parseInt(prediction_result)==2){
+            document.getElementById("main-heading").innerHTML = "Noo!! You may have hepatitis virus inside you.";
+            document.getElementById("sub-heading").innerHTML = "Consult your doctor and take all required blood test.";
+        }
+        else if(parseInt(prediction_result)==3){
+            document.getElementById("main-heading").innerHTML = "Not a great news. You are suffering from Fibrosis probably.";
+            document.getElementById("sub-heading").innerHTML = "Consult a dotor immediately.";
+        }
+        else{
+            document.getElementById("main-heading").innerHTML = "Serious!! You are suffering from cirrhosis probably.";
+            document.getElementById("sub-heading").innerHTML = "Visit your doctor immediately.";
+
+        }
+    </script>
     <div class="result-graph-div">
+        
+
         <canvas id="myChart" style="max-width:600px"></canvas>
 
         <script>
-        var xValues = ["Italy", "France", "Spain", "USA", "Argentina"];
-        var yValues = [1,0,4,5,90];
+
+        let nofattyliver_count = document.getElementById("one").value;
+        let fattyliver_count = document.getElementById("two").value;
+        let hepatitis_count = document.getElementById("three").value;
+        let fibrosis_count = document.getElementById("four").value;
+        let cirrhosis_count = document.getElementById("five").value;
+        
+
+        var xValues = ["No Fatty Liver", "Fatty Liver", "Hepatitis", "Fibrosis", "Cirrhosis"];
+        var yValues = [parseInt(nofattyliver_count*100), parseInt(fattyliver_count*100), parseInt(hepatitis_count*100), parseInt(fibrosis_count*100), parseInt(cirrhosis_count*100)];
         var barColors = [
-        "#b91d47",
-        "#00aba9",
-        "#2b5797",
+        "#1e7145",
         "#e8c3b9",
-        "#1e7145"
+        "#2b5797",
+        "#FFA500",
+        "#b91d47"
         ];
 
         new Chart("myChart", {
@@ -34,7 +75,7 @@
         options: {
             title: {
             display: true,
-            text: "World Wide Wine Production 2018"
+            text: "Prediction Probability Chart"
             }
         }
         });
@@ -43,14 +84,14 @@
 </div>
 <div class="result-main-div-2">
     <div class="sub-main-div-2">
-        <div class="counter-1" data-target="80">0</div>
+        <div class="counter-1">0</div>
         <script>
             // Selector
             const counters = document.querySelectorAll('.counter-1');
             // Main function
             for(let n of counters) {
             const updateCount = () => {
-                const target = + n.getAttribute('data-target');
+                const target = parseInt(nofattyliver_count*100);
                 const count = + n.innerText;
                 const speed = 100; // change animation speed here
                 const inc = target / speed; 
@@ -70,14 +111,14 @@
     </div>
 
     <div class="sub-main-div-2">
-        <div class="counter-2" data-target="10">0</div>
+        <div class="counter-2">0</div>
         <script>
             // Selector
             const counters2 = document.querySelectorAll('.counter-2');
             // Main function
             for(let n of counters2) {
             const updateCount = () => {
-                const target2 = + n.getAttribute('data-target');
+                const target2 = parseInt(fattyliver_count*100);
                 const count = + n.innerText;
                 const speed = 100; // change animation speed here
                 const inc = target2 / speed; 
@@ -92,18 +133,18 @@
             }
         </script>
         <div id="hover-content">
-            Probablity of Not having fatty Liver
+            Probablity of having fatty Liver
         </div>
     </div>
     <div class="sub-main-div-2">
-        <div class="counter-3" data-target="0">0</div>
+        <div class="counter-3">0</div>
         <script>
             // Selector
             const counters3 = document.querySelectorAll('.counter-3');
             // Main function
             for(let n of counters3) {
             const updateCount = () => {
-                const target3 = + n.getAttribute('data-target');
+                const target3 = parseInt(hepatitis_count*100);
                 const count = + n.innerText;
                 const speed = 100; // change animation speed here
                 const inc = target3 / speed; 
@@ -118,18 +159,18 @@
             }
         </script>
         <div id="hover-content">
-            Probablity of Not having fatty Liver
+            Probablity of having hepatitis
         </div>
     </div>
     <div class="sub-main-div-2">
-        <div class="counter-4" data-target="5">0</div>
+        <div class="counter-4">0</div>
         <script>
             // Selector
             const counters4 = document.querySelectorAll('.counter-4');
             // Main function
             for(let n of counters4) {
             const updateCount = () => {
-                const target4 = + n.getAttribute('data-target');
+                const target4 = parseInt(fibrosis_count*100);
                 const count = + n.innerText;
                 const speed = 100; // change animation speed here
                 const inc = target4 / speed; 
@@ -144,18 +185,18 @@
             }
         </script>
         <div id="hover-content">
-            Probablity of Not having fatty Liver
+            Probablity of having fibrosis
         </div>
     </div>
     <div class="sub-main-div-2">
-        <div class="counter-5" data-target="5">0</div>
+        <div class="counter-5">0</div>
         <script>
             // Selector
             const counters5 = document.querySelectorAll('.counter-5');
             // Main function
             for(let n of counters5) {
             const updateCount = () => {
-                const target5 = + n.getAttribute('data-target');
+                const target5 = parseInt(cirrhosis_count*100);
                 const count = + n.innerText;
                 const speed = 10000; // change animation speed here
                 const inc = target5 / speed; 
@@ -170,7 +211,7 @@
             }
         </script>
         <div id="hover-content">
-            Probablity of Not having fatty Liver
+            Probablity of having cirrhosis
         </div>
     </div>
 </div>
